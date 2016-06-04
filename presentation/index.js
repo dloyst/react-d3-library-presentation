@@ -21,7 +21,6 @@ require("../src/themes/default/index.css");
 
 const images = {
   falseComponent: require("../assets/falseComponent.png"),
-  noise: require("../assets/reactd3problem.jpg"),
   chart: require("../assets/chart.png"),
   rerouteD3: require("../assets/rerouteD3.gif"),
   badCode1: require("../assets/badCode1.png"),
@@ -33,7 +32,9 @@ const images = {
   ourReact: require("../assets/ourReact.png"),
   d31: require("../assets/d31.png"),
   d32: require("../assets/d32.png"),
-  d33: require("../assets/d33.png")
+  d33: require("../assets/d33.png"),
+  howItWorks: require('../assets/HowItWorks.jpg'),
+  underTheHood: require('../assets/underTheHood.jpg')
 };
 
 preloader(images);
@@ -71,42 +72,29 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["zoom"]} bgImage="primary">
-            <Heading size={1} caps fit textColor="white">
+            <Heading size={1} style={{marginTop: '-150px'}} caps fit textColor="white">
               Under the Hood Diagram
             </Heading>
-              <br /> <br />
-              <div style={{float: 'left', marginLeft: '-200px'}}>
+            <br />
+            <div style={{float: 'left', marginLeft: '-200px'}}>
                 D3 works by grabbing elements from the DOM
                 <br />
                 Then binds data to the elements
                 <br />
-                <Image 
-                  src='http://4.bp.blogspot.com/-bP2TWBLIj74/Usx_So4o80I/AAAAAAAADJo/7jb8erBdYGo/s1600/d3.png'
-                  style={
-                    {
-                      width: '400px',
-                      height: '400px',
-                      position: 'relative'
-                    }
-                  }
-                />
-              </div>
-              <br /> <br />
-              <div style={{marginLeft: '400px', marginTop: '-80px'}}>
+            </div>
+              <br />
+              <div style={{marginLeft: '400px', marginTop: '-46px', marginRight: '-350px'}}>
                 React works by abstracting a DOM representation
                 <br />
-                Only updates changes
-                <Image 
-                  src='http://image.slidesharecdn.com/reactjs-flux-160117101746/95/react-and-flux-life-cycle-with-jsx-react-router-and-jest-unit-testing-4-638.jpg?cb=1453658434'
-                  style={
-                    {
-                      width: '400px',
-                      height: '400px',
-                      position: 'relative'
-                    }
-                  }
-                />
+                Only updates necessary changes
               </div>
+              <Image
+                src={images.underTheHood.replace("/", "")} style={
+                  {
+                    border: '1px solid white',
+                    marginLeft: '-200px'
+                  }
+                } height="700px" width = '1300px'/>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
@@ -195,14 +183,18 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgImage="primary">
-            <img src="http://i.imgur.com/pSn14P1.gif" style={
-              {
-                position: "absolute",
-                top: -400,
-                left: -270
-
-              }
-            } width="1600" height="850"/>
+            <div style={{marginTop: -100, marginLeft: 250}}>
+              <Heading size={1} caps fit textColor="tertiary">
+                Our Solution <span style={{color: '#46AAE8'}}>Blah bl</span>
+              </Heading>
+            </div>
+            <Image
+              src={images.howItWorks.replace("/", "")} style={
+                {
+                  border: '1px solid black',
+                  marginLeft: '-200px'
+                }
+              } height="700px" width="1300px"/>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">

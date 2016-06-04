@@ -1,4 +1,5 @@
 import React from 'react';
+var count = 0;
 
 module.exports = React.createClass({
 
@@ -73,10 +74,10 @@ module.exports = React.createClass({
 
     d3.select('body')
       .append('svg')
-      .attr("width", 800)
+      .attr("width", 700)
       .attr("height", 650)
       .attr('class', 'svg-tree')
-      .style('margin-left', 540)
+      .style('margin-left', 350 + count)
       .style('margin-top', 150)
       .selectAll('line')
       .data(branches)
@@ -89,6 +90,9 @@ module.exports = React.createClass({
       .attr('y2', y2)
       .style('stroke-width', function(d) {return parseInt(maxDepth + 1 - d.d) + 'px';})
       .attr('id', function(d) {return 'id-'+d.i;})
+
+    count += 100;
+    z += 1;
 
   },
 
