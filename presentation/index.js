@@ -40,7 +40,7 @@ const images = {
   rerouteD3: require('../assets/3_DiagramSlide.jpg'),
   reactD3Library: require('../assets/4_DiagramSlide.jpg'),
   rd3treeData: require('../assets/5_DiagramSlide.jpg'),
-  rd3ToReact: require('../assets/6_DiagramSlide.jpg')
+  rd3ToReact: require('../assets/6_DiagramSlide.jpg'),
   cLogos: require("../assets/company_logos.jpg"),
   support: require("../assets/Supports.jpg")
 };
