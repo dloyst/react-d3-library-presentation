@@ -29,8 +29,8 @@ module.exports = React.createClass({
     const styleMakeTree = {
       background: "black",
       padding: 10,
-      marginTop: 700,
-      marginRight: 5,
+      marginTop: 650,
+      marginLeft: 100,
       textTransform: "uppercase",
       border: "none",
       color: "white",

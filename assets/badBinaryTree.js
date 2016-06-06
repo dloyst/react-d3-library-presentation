@@ -77,8 +77,8 @@ module.exports = React.createClass({
       .attr("width", 700)
       .attr("height", 650)
       .attr('class', 'svg-tree')
-      .style('margin-left', 350 + count)
-      .style('margin-top', 150)
+      .style('margin-left', 150 + count)
+      .style('margin-top', 155)
       .selectAll('line')
       .data(branches)
       .enter()
@@ -91,8 +91,7 @@ module.exports = React.createClass({
       .style('stroke-width', function(d) {return parseInt(maxDepth + 1 - d.d) + 'px';})
       .attr('id', function(d) {return 'id-'+d.i;})
 
-    count += 100;
-    z += 1;
+    count += 150;
 
   },
 
@@ -108,6 +107,7 @@ module.exports = React.createClass({
 
   deleteTree: function() {
     d3.selectAll('.svg-tree').remove();
+    d3.selectAll('img').remove();
   },
 
   render: function() {
