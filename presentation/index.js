@@ -41,6 +41,8 @@ const images = {
   reactD3Library: require('../assets/4_DiagramSlide.jpg'),
   rd3treeData: require('../assets/5_DiagramSlide.jpg'),
   rd3ToReact: require('../assets/6_DiagramSlide.jpg')
+  cLogos: require("../assets/company_logos.jpg"),
+  support: require("../assets/Supports.jpg")
 };
 
 preloader(images);
@@ -72,6 +74,35 @@ export default class Presentation extends React.Component {
             <Text bold caps textColor="tertiary">in React</Text>
             <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>by andrew burke, danny lee, and dave loyst!</Text>
             </div>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="rgb(34, 34, 34)">
+            <Image src="https://s3.amazonaws.com/media-p.slid.es/uploads/473947/images/2571254/How-to-integrate-React-D3-The-right-way-adeveloperdiary.com-4.jpg" margin="0px auto 40px" height="293px"/>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="tertiary">
+            <Heading style={{
+              position: 'absolute',
+              top: -450,
+              left: -300
+            }} size={1} textColor="rgb(34, 34, 34)">
+              React:
+            </Heading>
+            <Image style={
+              {
+                position: "absolute",
+                top: -300,
+                left: -300
+              }
+            }
+            src={images.cLogos.replace("/", "")} margin="0px auto 40px" height="750px"/>
+            <Heading style={{
+              position: 'absolute',
+              top: -450,
+              left: 450
+            }} size={1} textColor="rgb(34, 34, 34)">
+              D3:
+            </Heading>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
@@ -328,14 +359,14 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <Heading size={1} textColor="white">
-              Supports:
-            </Heading>
-            <List>
-                Animations, Brush, Canvas, Tags, Chords, Clusters, Drag, Event, Listeners, Force, Graphs, Histograms
-                Layouts, Paths, Polygons, Projections, Quadtree, Ranges, Scales, Shapes, Streams
-                Timers, Tooltips, Transitions, Trees, Voronoi, Zoom
-            </List>
+            <Image style={
+              {
+                position: "absolute",
+                top: -450,
+                left: -320
+              }
+            }
+            src={images.support.replace("/", "")} margin="0px auto 40px" height="1000px"/>
           </Slide>
 
           <Slide transition={["fade"]} bgColor="tertiary">
