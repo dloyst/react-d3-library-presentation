@@ -128,9 +128,29 @@ export default class Presentation extends React.Component {
           <Slide transition={["slide"]} bgColor="primary">
             <h1>Fundamentals</h1>
             <ul>
-              <li style={{textAlign: "left"}}>D3 selects DOM elements and applies changes directly on the DOM</li>
-              <li style={{textAlign: "left"}}>Point 2</li>
-              <li style={{textAlign: "left"}}>Point 3</li>
+              <li style={{textAlign: "left"}}>D3.js
+                <ul>
+                  <li style={{textAlign: "left"}}>D3 selects DOM elements</li>
+                  <li style={{textAlign: "left"}}>Append elements, add attributes, add event listeners</li>
+                  <li style={{textAlign: "left"}}>Static content</li>
+                  <br />
+                </ul>
+              </li>
+              <li style={{textAlign: "left"}}>React.js
+                <ul>
+                  <li style={{textAlign: "left"}}>Virtual representation of the DOM</li>
+                  <li style={{textAlign: "left"}}>Makes changes to 'Virtual DOM', only render differences</li>
+                  <li style={{textAlign: "left"}}>Unique key id's to improve optimization</li>
+                  <br />
+                </ul>
+              </li>
+              <li style={{textAlign: "left"}}>Difficulties
+                <ul>
+                  <li style={{textAlign: "left"}}>SPA's would be a nightmare</li>
+                  <li style={{textAlign: "left"}}>D3 will act without React's knowledge</li>
+                  <br />
+                </ul>
+              </li>
             </ul>
           </Slide>
 
@@ -253,11 +273,14 @@ export default class Presentation extends React.Component {
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
-            <h1>Fundamentals</h1>
+            <h1>React D3 Library Solution</h1>
+            <br />
             <ul>
-              <li style={{textAlign: "left"}}>Point 1</li>
-              <li style={{textAlign: "left"}}>Point 2</li>
-              <li style={{textAlign: "left"}}>Point 3</li>
+              <li style={{textAlign: "left"}}>Reroute D3 into React's Virtual DOM</li>
+              <br />
+              <li style={{textAlign: "left"}}>Transfer over D3 functionalities</li>
+              <br />
+              <li style={{textAlign: "left"}}>Correctly use React's diffing algorithm</li>
             </ul>
           </Slide>
 
