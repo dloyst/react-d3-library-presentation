@@ -31,7 +31,7 @@ export default class Interactive extends Component {
 
     const divStyles = {
       marginTop: -350,
-      marginLeft: -383,
+      marginLeft: -290,
       width: 1800,
       height: 100
     }

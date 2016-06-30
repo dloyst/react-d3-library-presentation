@@ -42,7 +42,9 @@ const images = {
   rd3treeData: require('../assets/5_DiagramSlide.jpg'),
   rd3ToReact: require('../assets/6_DiagramSlide.jpg'),
   cLogos: require("../assets/company_logos.jpg"),
-  support: require("../assets/Supports.jpg")
+  support: require("../assets/Supports.jpg"),
+  bubbleChart: require('../assets/bubbleChart.png'),
+  fiveLines: require('../assets/5linesofCode.png')
 };
 
 preloader(images);
@@ -72,7 +74,7 @@ export default class Presentation extends React.Component {
               A codesmith Presentation
             </Heading>
             <Text bold caps textColor="tertiary">in React</Text>
-            <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>by andrew burke, danny lee, and dave loyst!</Text>
+            <Text textColor="tertiary" textSize="1.5em" margin="20px 0px 0px" bold>by andrew burke, daniel lee, and dave loyst!</Text>
             </div>
           </Slide>
 
@@ -103,6 +105,33 @@ export default class Presentation extends React.Component {
             }} size={1} textColor="rgb(34, 34, 34)">
               D3:
             </Heading>
+            <Image src={images.bubbleChart.replace("/", "")} style={
+              {
+                position: 'absolute',
+                marginLeft: -30,
+                marginTop: -360,
+                height: 425,
+                width: 750
+              }
+            } />
+            <a href="https://imgflip.com/gif/15e37k"><img style={
+              {
+                position: 'absolute',
+                marginLeft: -30,
+                marginTop: 75,
+                height: 400,
+                width: 750
+              }
+            } src="https://i.imgflip.com/15e37k.gif"/></a>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+            <h1>Fundamentals</h1>
+            <ul>
+              <li style={{textAlign: "left"}}>D3 selects DOM elements and applies changes directly on the DOM</li>
+              <li style={{textAlign: "left"}}>Point 2</li>
+              <li style={{textAlign: "left"}}>Point 3</li>
+            </ul>
           </Slide>
 
           <Slide transition={["slide"]} bgColor="primary">
@@ -143,14 +172,6 @@ export default class Presentation extends React.Component {
                 height: '515px'
               }
             } >
-              <Image src={images.cutOffTree.replace("/", "")} style={
-                {
-                  position: 'absolute',
-                  marginLeft: '-459px',
-                  height: '456px',
-                  width: '300px'
-                }
-              }/>
               <BadTree />
             </div>
           </Slide>
@@ -229,6 +250,15 @@ export default class Presentation extends React.Component {
                 <Image
                   src={images.badCode5.replace("/", "")} height="600px" width="700px"/>
               </Appear>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="primary">
+            <h1>Fundamentals</h1>
+            <ul>
+              <li style={{textAlign: "left"}}>Point 1</li>
+              <li style={{textAlign: "left"}}>Point 2</li>
+              <li style={{textAlign: "left"}}>Point 3</li>
+            </ul>
           </Slide>
 
           <Slide transition={["zoom"]} bgImage="primary">
@@ -329,27 +359,34 @@ export default class Presentation extends React.Component {
                     top: -25
                   }
                 } height="800px" width="750px"/>
-            <Appear style={
+              <Image
+                src={images.ourD3.replace("/", "")} height="700px" width="800px" style={
               {
                 border: '1px solid white',
                 position: 'absolute',
                 left: 325,
                 top: -500
               }
-            }fid='1'>
+            }/>
               <Image
-                src={images.ourD3.replace("/", "")} height="700px" width="800px"/>
-            </Appear>
-            <Appear style={
+                src={images.ourReact.replace("/", "")} height="550px" width="700px" style={
               {
                 border: '1px solid white',
                 position: 'absolute',
                 left: 600,
                 top: 0
               }
-            } fid='2'>
+            }/>
+            <Appear style={
+              {
+                position: 'absolute',
+                marginTop: -300,
+                marginLeft: -550,
+                border: '1px solid white'
+              }
+            } fid='1'>
               <Image
-                src={images.ourReact.replace("/", "")} height="550px" width="700px"/>
+                src={images.fiveLines.replace("/", "")} height='600px' width='1200px' />
             </Appear>
           </Slide>
 
@@ -377,10 +414,11 @@ export default class Presentation extends React.Component {
             <Heading size={.75} caps fit textColor="black">
               Andrew, Daniel, and Dave
             </Heading>
+            Featured on Product Hunt and 350+ stars on Github
+            <br />
             <Heading size={.25} textColor="black">
               https://github.com/react-d3-library/react-d3-library
             </Heading>
-
           </Slide>
 
         </Deck>

@@ -102,8 +102,9 @@ module.exports = React.createClass({
       var selection = ReactDom.findDOMNode(this);
       var div = d3.select(selection);
       var svg = div.selectAll('svg')
+          .attr('height', '1000px');
 
-          var layer = svg.selectAll(".layer")
+      var layer = svg.selectAll(".layer")
           .data(layers)
         .enter().append("g")
           .attr("class", "layer")
@@ -141,8 +142,8 @@ module.exports = React.createClass({
     }
 
     var rd3Style = {
-      marginLeft: -350,
-      marginTop: 250,
+      marginLeft: -450,
+      marginTop: 225,
       position: "absolute",
 
     }

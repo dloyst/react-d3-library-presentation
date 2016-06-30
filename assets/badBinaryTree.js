@@ -1,5 +1,6 @@
 import React from 'react';
 var count = 0;
+var colors = ['white', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'black'];
 
 module.exports = React.createClass({
 
@@ -72,26 +73,32 @@ module.exports = React.createClass({
       }
     }
 
+    function pickColor() {
+      count > 6 ? count = -1 : count = count;
+      count++;
+      return colors[count];
+    }
+
+    var thisColor = pickColor();
+    
     d3.select('body')
       .append('svg')
       .attr("width", 700)
       .attr("height", 650)
       .attr('class', 'svg-tree')
-      .style('margin-left', 150 + count)
+      .style('margin-left', 450)
       .style('margin-top', 155)
       .selectAll('line')
       .data(branches)
       .enter()
       .append('line')
-      .attr('stroke', '#af111c')
+      .attr('stroke', thisColor)
       .attr('x1', x1)
       .attr('y1', y1)
       .attr('x2', x2)
       .attr('y2', y2)
       .style('stroke-width', function(d) {return parseInt(maxDepth + 1 - d.d) + 'px';})
       .attr('id', function(d) {return 'id-'+d.i;})
-
-    count += 150;
 
   },
 

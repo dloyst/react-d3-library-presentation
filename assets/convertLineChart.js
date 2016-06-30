@@ -17,8 +17,8 @@ module.exports = React.createClass({
   render: function() {
     const templateStyle = {
       position: "absolute",
-      left: 670,
-      top: -5
+      left: 560,
+      top: -30
 
     }
     return (

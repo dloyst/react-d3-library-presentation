@@ -1,4 +1,7 @@
 var d3 = require('d3');
+var count = 0;
+var colors = ['white', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'black'];
+
 module.exports = function() {
   var div = document.createElement('div');
   /* D3 Tree */
@@ -73,6 +76,14 @@ module.exports = function() {
     }
   }
 
+    function pickColor() {
+      count > 6 ? count = -1 : count = count;
+      count++;
+      return colors[count];
+    }
+
+    var thisColor = pickColor();
+
   d3.select(div)
     .append('svg')
     .attr("width", 800)
@@ -83,7 +94,7 @@ module.exports = function() {
     .data(branches)
     .enter()
     .append('line')
-    .attr('stroke', 'white')
+    .attr('stroke', thisColor)
     .attr('x1', x1)
     .attr('y1', y1)
     .attr('x2', x2)
