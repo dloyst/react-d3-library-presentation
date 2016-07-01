@@ -437,7 +437,7 @@ export default class Presentation extends React.Component {
             <Heading size={.75} caps fit textColor="black">
               Andrew, Daniel, and Dave
             </Heading>
-            Featured on Product Hunt and 350+ stars on Github
+            Featured on Product Hunt and 550+ stars on Github
             <br />
             <Heading size={.25} textColor="black">
               https://github.com/react-d3-library/react-d3-library
