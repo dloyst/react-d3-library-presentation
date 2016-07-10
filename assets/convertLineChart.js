@@ -15,16 +15,18 @@ module.exports = React.createClass({
   },
 
   render: function() {
+
     const templateStyle = {
       position: "absolute",
       left: 560,
       top: -30
-
     }
+
     return (
       <div style={templateStyle}>
         <Rd3Component data={this.state.d3} />
       </div>
     )
   }
+  
 });
