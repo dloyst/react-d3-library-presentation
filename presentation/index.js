@@ -449,31 +449,3 @@ export default class Presentation extends React.Component {
     );
   }
 }
-
-
-
-
-
-
-
-//Other Problems
-// <Slide transition={["slide"]} bgColor="primary">
-//   <OtherProblems/>
-//   <Image style={
-//     {
-//       position: "absolute",
-//       top: -300,
-//       left: -300
-//     }
-//   }
-//   src={images.chart.replace("/", "")} margin="0px auto 40px" height="750px"/>
-//   <Image style={
-//     {
-//       position: "absolute",
-//       top: -300,
-//       left: 650
-
-//     }
-//   }
-//   src={images.falseComponent.replace("/", "")} margin="0px auto 40px" height="620px" width="640px"/>
-// </Slide>
